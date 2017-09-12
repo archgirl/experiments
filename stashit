@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>From The Lab</title>
+  
+  <!-- Reset -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  
+  <!-- Materialize -->
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css'>
+  
+  <!-- Material Icons -->
+  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+	
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  
+</head>
+	
+<body onload="fetchBookmarks()">
+	
+	<header>
+		<nav class="purple darken-4" role="navigation">
+      <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo center">From The Lab</a>
+
+        <ul id="nav-mobile" class="side-nav">
+          <li class="nav-intro"><a href="#" class="center">A Collection of Experiments</a></li>
+          <li><a href="/stashit"><i class="material-icons logo">bookmark_border</i>StashIt</a></li>
+        </ul>
+
+        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+      </div>
+    </nav>
+	</header>
+	
+	<main>
+		<section>
+    
+      <div class="section no-pad-bot" id="index-banner">
+        <div class="container">
+          <h1 class="header center blue-grey-text">StashIt</h1>
+          <div class="row center">
+            <h5 class="header col s12 light">A quick and dirty bookmarking tool.</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+      
+        <div class="section">
+          <div class="row">
+            <form id="bookmarkNew" class="col s12">
+              <div class="row data-entry">
+                <div class="input-field col s6">
+                  <input id="siteName" type="text" class="validate">
+                  <label for="siteName">Site Name</label>
+                </div>
+                <div class="input-field col s6">
+                  <input id="siteUrl" type="text" class="validate">
+                  <label for="siteUrl">Site URL</label>
+                </div>
+              </div>
+              <div class="row center">
+                <button type="submit" id="bookmarkSubmit" class="btn-large waves-effect waves-light purple">Create A Bookmark</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        
+        <div class="section">
+          <div class="row">
+            <ul id="bookmarkResults" class="collection">
+            </ul>
+          </div>
+        </div>
+        
+      </div>
+      
+    </section>
+	</main>
+	
+	<div class="footer-copyright">
+    <div class="container">
+      Made with ❤ by <a class="blue-grey-text text-lighten-3" href="http://melaniemagdalena.com">Melanie E Magdalena</a>
+    </div>
+  </div>
+  
+  <!-- Load jQuery -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+  
+  <!-- Load Materialize -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js'></script>
+  
+  <!-- Init Bookmark.js -->
+  <script src="js/bookmark.js"></script>
+  
+  <!-- Init Nav -->
+  <script>
+  (function($){
+    $(function(){
+      $('.button-collapse').sideNav();
+    }); // end of document ready
+  })(jQuery); // end of jQuery name space
+  </script>
+	
+</body>
+
+</html>
