@@ -16,6 +16,14 @@ li.nav-intro > a {
   padding-top: 8px;
 }
 
+/* footer */
+
+footer {
+  position: fixed;
+  bottom: 0;
+  margin-top: 50px;
+}
+
 /* label focus color */
 .input-field input[type=text]:focus + label {
   color: #9C27B0;
