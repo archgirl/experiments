@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>From The Lab</title>
+  <title>List It</title>
   
   <!-- Reset -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
@@ -31,7 +31,7 @@
         <ul id="nav-mobile" class="side-nav">
           <li class="nav-intro"><a href="#" class="center">A Collection of Experiments</a></li>
           <li><a href="/experiments/stashit"><i class="material-icons logo">bookmark_border</i>Stash It</a></li>
-	  <li><a href="/experiments/listit"><i class="material-icons logo">format_list_numbered</i>List It</a></li>
+	        <li><a href="/experiments/listit"><i class="material-icons logo">format_list_numbered</i>List It</a></li>
         </ul>
 
         <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
@@ -50,11 +50,14 @@
     
       <section id="createTasks">
         <form v-on:submit='addTask'>
-          <div class="task-input">
-            <input type="text" class="task-input-box" v-model='tasks.name' placeholder='Add a New Task'>
-          </div>
-          <div class="task-add">
-            <input type="submit" value="Add" class="task-add-box">
+          <div class="row">
+            <div class="input-field col s12">
+              <input type="text" class="task-input-field" v-model="tasks.name">
+              <label>Add A New Task</label>
+            </div>
+            <div>
+              <input type="submit" value="add" class="waves-effect waves-light btn purple white-text">Add</a>
+            </div>
           </div>
         </form>
       </section>
