@@ -149,11 +149,9 @@ button.delete:hover {
 
 /* Progress Bar */
 
-footer {
+#progressBar {
   width: 100%;
   height: 40px;
-  position: fixed;
-  bottom: 0;
 }
 
 .completionProgressBar {
