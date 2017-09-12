@@ -1,3 +1,9 @@
+/* Task List */
+
+.collection .collection-item {
+  line-height: 2.5rem;
+}
+
 /* Progress Bar */
 
 #progressBar {
