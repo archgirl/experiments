@@ -1,0 +1,58 @@
+/* nav card */
+
+li.nav-intro {
+  height: 64px;
+  background-color: #6a1b9a;
+  border-bottom: 1px solid rgba(0,0,0,0.4);
+}
+
+li.nav-intro:hover {
+  background-color: #6a1b9a;
+}
+
+li.nav-intro > a {
+  font-size: 16px;
+  color: #ffffff;
+  padding-top: 8px;
+}
+
+/* label focus color */
+.input-field input[type=text]:focus + label {
+  color: #9C27B0;
+}
+
+/* label underline focus color */
+.input-field input[type=text]:focus {
+  border-bottom: 1px solid #9C27B0;
+  box-shadow: 0 1px 0 0 #000;
+}
+
+/* icon colors */
+.visit {
+  color: #4a148c;
+  margin-right: 15px;
+}
+.visit:hover {
+  color: #9c27b0;
+}
+.delete {
+  color: #bdbdbd;
+  margin-right: 0px;
+}
+.delete:hover {
+  color: #424242;
+}
+
+@media only screen and (min-width: 993px) {
+  nav a.button-collapse {
+    display: block;
+    margin: 0;
+  }
+}
+
+
+@media screen and (max-width: 420px) {
+  .row .col.s6 {
+    width: 100%;
+  }
+}
