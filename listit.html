@@ -50,17 +50,19 @@
     
       <section id="createTasks">
         <div class="container">
-          <form v-on:submit='addTask'>
-            <div class="row">
-              <div class="input-field col s6">
-                <input type="text" class="task-input-field" v-model="tasks.name">
-                <label>Add A New Task</label>
+		      <div class="row">
+            <form v-on:submit='addTask'>
+              <div class="row">
+                <div class="input-field col s8">
+                  <input type="text" class="task-input-field" v-model="tasks.name">
+                  <label>Add A New Task</label>
+                </div>
+                <div class="col s2">
+                  <input type="submit" value="add" class="btn-floating btn-large waves-effect waves-light purple">
+                </div>
               </div>
-              <div class="col s6">
-                <input type="submit" value="add" class="waves-effect waves-light btn purple white-text"></a>
-              </div>
-            </div>
-          </form>
+            </form>
+          </div>
         </div>
       </section>
       
@@ -69,7 +71,7 @@
           <li class="collection-item" v-for="task in tasks" :class="{ taskDone: task.done }">
             <input type="checkbox" v-model="task.done">
             <label>{{ task.name }}</label>
-            <button class="delete" v-on:click="deleteTask(task)"><i class="material-icons">delete</i></button>
+            <button class="secondary-content" v-on:click="deleteTask(task)"><i class="material-icons">delete</i></button>
           </li>
         </ul>
       </section>
