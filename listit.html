@@ -72,7 +72,7 @@
         </ul>
       </section>
       
-      <section v-if="displayProgressBar">
+      <section id="progressBar" v-if="displayProgressBar">
         <div class="completionProgressBar">
           <div class="completionProgressFill" :style="{ width: percentageOfTasksCompleted + '%' }">
             <span class="tasksCompleted">{{ Math.round(percentageOfTasksCompleted) }}%</span>
@@ -87,7 +87,7 @@
     <div class="container">
       <div class="row">
         <h5 class="white-text">About this Experiment</h5>
-        <p class="grey-text text-lighten-4">This bookmarking tool was created with <a class="blue-grey-text text-lighten-4" href="http://materializecss.com">Materialize</a>, <a class="blue-grey-text text-lighten-4" href="https://www.materialpalette.com/">Material Palette</a>, and <a class="blue-grey-text text-lighten-4" href="https://www.youtube.com/watch?v=DIVfDZZeGxM">JavaScript</a>. It uses your local browser storage to save bookmarks you enter, so you can reload this page at any time and will never lose the sites you love!</p>
+        <p class="grey-text text-lighten-4">Built with Vue.js, this To-Do List app will hopefully inspire you to procrastinate a little bit less.</p>
       </div>
     </div>
     <div class="footer-copyright">
