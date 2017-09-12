@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>From The Lab</title>
+  
+  <!-- Reset -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  
+  <!-- Materialize -->
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css'>
+  
+  <!-- Material Icons -->
+  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+	
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  
+</head>
+	
+<body onload="fetchBookmarks()">
+	
+	<header>
+		<nav class="purple darken-4" role="navigation">
+      <div class="nav-wrapper container"><a id="logo-container" href="/experiments/" class="brand-logo center">From The Lab</a>
+
+        <ul id="nav-mobile" class="side-nav">
+          <li class="nav-intro"><a href="#" class="center">A Collection of Experiments</a></li>
+          <li><a href="/experiments/stashit"><i class="material-icons logo">bookmark_border</i>Stash It</a></li>
+	  <li><a href="/experiments/listit"><i class="material-icons logo">format_list_numbered</i>List It</a></li>
+        </ul>
+
+        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+      </div>
+    </nav>
+	</header>
+	
+	<main>
+		<section id="taskApp">
+
+      <div class="section no-pad-bot" id="index-banner">
+        <div class="container">
+          <h1 class="header center blue-grey-text">List It</h1>
+        </div>
+      </div>
+    
+      <section id="createTasks">
+        <form v-on:submit='addTask'>
+          <div class="task-input">
+            <input type="text" class="task-input-box" v-model='tasks.name' placeholder='Add a New Task'>
+          </div>
+          <div class="task-add">
+            <input type="submit" value="Add" class="task-add-box">
+          </div>
+        </form>
+      </section>
+      
+      <section id="taskList" class="container">
+        <ul class="list">
+          <li class="task" v-for="task in tasks" :class="{ taskDone: task.done }">
+            <input type="checkbox" v-model="task.done">
+            <label>{{ task.name }}</label>
+            <button class="delete" v-on:click="deleteTask(task)"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+          </li>
+        </ul>
+      </section>
+      
+      <section v-if="displayProgressBar">
+        <div class="completionProgressBar">
+          <div class="completionProgressFill" :style="{ width: percentageOfTasksCompleted + '%' }">
+            <span class="tasksCompleted">{{ Math.round(percentageOfTasksCompleted) }}%</span>
+          </div>
+        </div>
+      </section>
+      
+    </section>
+	</main>
+  
+  <footer class="page-footer blue-grey">
+    <div class="container">
+      <div class="row">
+        <h5 class="white-text">About this Experiment</h5>
+        <p class="grey-text text-lighten-4">This bookmarking tool was created with <a class="blue-grey-text text-lighten-4" href="http://materializecss.com">Materialize</a>, <a class="blue-grey-text text-lighten-4" href="https://www.materialpalette.com/">Material Palette</a>, and <a class="blue-grey-text text-lighten-4" href="https://www.youtube.com/watch?v=DIVfDZZeGxM">JavaScript</a>. It uses your local browser storage to save bookmarks you enter, so you can reload this page at any time and will never lose the sites you love!</p>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        Made with ❤ by <a class="blue-grey-text text-lighten-3" href="http://melaniemagdalena.com">Melanie E Magdalena</a>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Load Vue -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.min.js'></script>
+  
+  <!-- Load jQuery -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+  
+  <!-- Load Materialize -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js'></script>
+  
+  <!-- Init Todo.js -->
+  <script src="js/todo.js"></script>
+  
+  <!-- Init Nav -->
+  <script>
+  (function($){
+    $(function(){
+      $('.button-collapse').sideNav();
+    }); // end of document ready
+  })(jQuery); // end of jQuery name space
+  </script>
+	
+</body>
+
+</html>
