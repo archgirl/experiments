@@ -17,8 +17,8 @@
   <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
 	
   <!-- Custom Styles -->
-  <link rel="stylesheet" href="css/todo.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/todo.css">
   
 </head>
 	
@@ -53,7 +53,7 @@
 		      <div class="row">
             <form v-on:submit='addTask'>
               <div class="row">
-                <div class="input-field col s8">
+                <div class="input-field col s7 offset-2">
                   <input type="text" class="task-input-field" v-model="tasks.name">
                   <label>Add A New Task</label>
                 </div>
@@ -71,7 +71,9 @@
           <li class="collection-item" v-for="task in tasks" :class="{ taskDone: task.done }">
             <input type="checkbox" v-model="task.done">
             <label>{{ task.name }}</label>
-            <button class="secondary-content waves-effect waves-light grey" v-on:click="deleteTask(task)"><i class="material-icons">delete</i>Delete</button>
+            <button class="secondary-content btn-floating waves-effect waves-light grey lighten-1" v-on:click="deleteTask(task)">
+	            <i class="material-icons left">delete</i>Delete
+            </button>
           </li>
         </ul>
       </section>
