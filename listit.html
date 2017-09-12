@@ -29,7 +29,7 @@
       <div class="nav-wrapper container"><a id="logo-container" href="/experiments/" class="brand-logo center">From The Lab</a>
 
         <ul id="nav-mobile" class="side-nav">
-          <li class="nav-intro"><a href="#" class="center">A Collection of Experiments</a></li>
+          <li class="nav-intro"><a href="/experiments" class="center">A Collection of Experiments</a></li>
           <li><a href="/experiments/stashit"><i class="material-icons logo">bookmark_border</i>Stash It</a></li>
 	        <li><a href="/experiments/listit"><i class="material-icons logo">format_list_numbered</i>List It</a></li>
         </ul>
@@ -58,7 +58,7 @@
                   <label>Add A New Task</label>
                 </div>
                 <div class="col s2">
-                  <input type="submit" class="btn-floating btn-large waves-effect waves-light purple"><i class="material-icons">add</i>
+                  <button type="submit" class="btn-floating btn-large waves-effect waves-light purple"><i class="material-icons">add</i></button>
                 </div>
               </div>
             </form>
@@ -71,7 +71,7 @@
           <li class="collection-item" v-for="task in tasks" :class="{ taskDone: task.done }">
             <input type="checkbox" v-model="task.done">
             <label>{{ task.name }}</label>
-            <button class="secondary-content" v-on:click="deleteTask(task)"><i class="material-icons">delete</i></button>
+            <button class="secondary-content waves-effect waves-light grey" v-on:click="deleteTask(task)"><i class="material-icons">delete</i>Delete</button>
           </li>
         </ul>
       </section>
