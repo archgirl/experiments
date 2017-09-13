@@ -16,18 +16,8 @@ li.nav-intro > a {
   padding-top: 8px;
 }
 
-/* label focus color */
-.input-field input[type=text]:focus + label {
-  color: #9C27B0;
-}
-
-/* label underline focus color */
-.input-field input[type=text]:focus {
-  border-bottom: 1px solid #9C27B0;
-  box-shadow: 0 1px 0 0 #000;
-}
-
 /* icon colors */
+
 .visit {
   color: #4a148c;
   margin-right: 15px;
@@ -43,13 +33,14 @@ li.nav-intro > a {
   color: #424242;
 }
 
+/* Breakpoint Override */
+
 @media only screen and (min-width: 993px) {
   nav a.button-collapse {
     display: block;
     margin: 0;
   }
 }
-
 
 @media screen and (max-width: 420px) {
   .row .col.s6 {
