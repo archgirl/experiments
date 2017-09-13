@@ -73,16 +73,16 @@
       <section id="taskList" class="container">
         <ul class="collection">
           <li class="collection-item" v-for="task in tasks" :class="{ taskDone: task.done }">
-            <input type="checkbox" v-model="task.done">
+            <input type="checkbox" v-model="task.done" v-on:click="value='checked'">
             <label>{{ task.name }}</label>
-            <button class="secondary-content btn-floating waves-effect waves-light grey lighten-1" v-on:click="deleteTask(task)">
+            <button class="secondary-content btn-floating waves-effect waves-light transparent lighten-1" v-on:click="deleteTask(task)">
 	            <i class="material-icons left">delete</i>Delete
             </button>
           </li>
         </ul>
       </section>
       
-      <section id="progressBar" v-if="displayProgressBar">
+      <section id="progressBar" class="container row" v-if="displayProgressBar">
         <div class="completionProgressBar">
           <div class="completionProgressFill" :style="{ width: percentageOfTasksCompleted + '%' }">
             <span class="tasksCompleted">{{ Math.round(percentageOfTasksCompleted) }}%</span>
