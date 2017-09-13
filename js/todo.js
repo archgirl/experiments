@@ -1,3 +1,6 @@
+Vue.config.debug = true;
+Vue.config.devtools = true;
+
 var taskApp = new Vue({
   el: "#taskApp",
   data: {
