@@ -8,19 +8,6 @@ img:hover {
   transition: all 1s;
 }
 
-.grass:hover {
-  fill: #b4cd6a;
-}
-
-.fire:hover {
-  fill: #ff5a00;
-}
-
-.water:hover {
-  fill: #6ab4e6;
-}
-
-
 #results {
   height: 150px;
 }
