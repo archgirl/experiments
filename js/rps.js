@@ -35,7 +35,7 @@ var chooseWinner = function (player, cpu) {
 
 // User Interface
 
-var paragraph = document.querySelector('p');
+var paragraph = document.querySelector('p.results');
 
 var assignClick = function(tag, pos) {
   // assign a click listener
