@@ -82,7 +82,7 @@
       </section>
       
       <section id="progressBar" class="container row" v-if="displayProgressBar">
-        <div class="completionProgressBar">
+        <div class="completionProgressBar col s8 offset-s2">
           <div class="completionProgressFill" :style="{ width: percentageOfTasksCompleted + '%' }">
             <span class="tasksCompleted">{{ Math.round(percentageOfTasksCompleted) }}%</span>
           </div>
