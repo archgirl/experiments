@@ -8,6 +8,6 @@ img:hover {
   transition: all 1s;
 }
 
-p.results {
+section#results {
   height: 200px;
 }
