@@ -1,3 +1,16 @@
+/* New Task */
+
+/* label focus color */
+.input-field input[type=text]:focus + label {
+  color: #03a9f4;
+}
+
+/* label underline focus color */
+.input-field input[type=text]:focus {
+  border-bottom: 1px solid #03a9f4;
+  box-shadow: 0 1px 0 0 #000;
+}
+
 /* Task List */
 
 .collection .collection-item {
@@ -12,7 +25,7 @@
 
 .completionProgressBar {
   height: 40px;
-  background-color: #27a0e6;
+  background-color: #03a9f4;
   color: #ffffff;
   box-shadow: 0px 10px 60px 0 rgba(255, 255, 255, 0.5);
 }
@@ -22,14 +35,10 @@
   height: 40px;
   display: flex;
   align-items: center;
-  background: #3cd1e8;
+  background-color: #80d8ff;
   transition: background 1s ease-in;
 }
 
 .tasksCompleted {
-  margin: 30px;
-}
-
-.hidden {
-  display: none;
+  margin: 0 30px;
 }
