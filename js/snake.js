@@ -1,4 +1,4 @@
-//Constants
+// Constants
 var COLS=26, ROWS=26;
 // IDs
 var EMPTY=0, SNAKE=1, FRUIT=2;
@@ -80,7 +80,8 @@ function main() {
   canvas.width = COLS*20;
   canvas.height = ROWS*20;
   ctx = canvas.getContext("2d");
-  div.appendChild(canvas);
+  // div.appendChild(canvas);
+  document.body.appendChild(canvas);
 
   ctx.font = "12px Helvetica";
 
