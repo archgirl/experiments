@@ -16,6 +16,11 @@ li.nav-intro > a {
   padding-top: 8px;
 }
 
+.container .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 /* icon colors */
 
 .visit {
