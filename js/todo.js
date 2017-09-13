@@ -10,7 +10,7 @@ var taskApp = new Vue({
     deletedTasks: 0,
     tasks: [
       { 
-        name: "Check off a task to cross it off", 
+        name: "Click a task to cross it off", 
         done: false 
       }
     ]
