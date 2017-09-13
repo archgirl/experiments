@@ -12,6 +12,10 @@ var taskApp = new Vue({
       { 
         name: "Click a task to cross it off", 
         done: false 
+      },
+      { 
+        name: "Crossed off tasks count toward your progress", 
+        done: true 
       }
     ]
   },
