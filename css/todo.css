@@ -17,6 +17,10 @@
   line-height: 2.5rem;
 }
 
+.delete {
+  margin-top: 6px;
+}
+
 /* Progress Bar */
 
 #progressBar {
