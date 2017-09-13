@@ -76,12 +76,12 @@ var canvas, ctx, keystate, frames, score;
 
 function main() {
   canvas = document.createElement("canvas");
-  div = document.getElementById(snakeGame); 
+  // div = document.getElementById(snakeGame); 
   canvas.width = COLS*20;
   canvas.height = ROWS*20;
   ctx = canvas.getContext("2d");
-  // div.appendChild(canvas);
-  document.body.appendChild(canvas);
+  // document.body.appendChild(canvas);
+  document.getElementById('snakeGame').appendChild(canvas);
 
   ctx.font = "12px Helvetica";
 
