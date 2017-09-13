@@ -74,8 +74,7 @@
         <div class="row">
           <ul class="collection">
             <li class="collection-item" v-for="task in tasks" :class="{ taskDone: task.done }">
-              <input type="checkbox" v-model="task.done">
-              <label>{{ task.name }}</label>
+              <label><input type="checkbox" v-model="task.done">{{ task.name }}</label>
               <a class="secondary-content" href="#"><i class="material-icons delete" v-on:click="deleteTask(task)">delete</i></a>
             </li>
           </ul>
