@@ -71,16 +71,16 @@
       </section>
       
       <section id="taskList" class="container">
-        <ul class="collection">
-          <li class="collection-item" v-for="task in tasks" :class="{ taskDone: task.done }">
-            <input type="checkbox">
-            <label v-model="task.done">{{ task.name }}
-              <span class="secondary-content">
-                <i class="material-icons left delete" v-on:click="deleteTask(task)">delete</i>
-              </span>
-            </label>
-          </li>
-        </ul>
+        <div class="row">
+          <ul class="collection">
+            <li class="collection-item" v-for="task in tasks" :class="{ taskDone: task.done }">
+              <input type="checkbox" v-model="task.done">
+              <label>{{ task.name }}
+                <a class="secondary-content" href="#"><i class="material-icons left delete" v-on:click="deleteTask(task)">delete</i></a>
+              </label>
+            </li>
+          </ul>
+        </div>
       </section>
       
       <section id="progressBar" class="container row" v-if="displayProgressBar">
