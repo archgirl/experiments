@@ -73,8 +73,8 @@
       <section id="taskList" class="container">
         <ul class="collection">
           <li class="collection-item" v-for="task in tasks" :class="{ taskDone: task.done }">
-            <input type="checkbox" v-model="task.done" v-on:click="value='checked'">
-            <label>{{ task.name }}</label>
+            <input type="checkbox">
+            <label v-model="task.done">{{ task.name }}</label>
             <button class="secondary-content btn-floating waves-effect waves-light transparent lighten-1" v-on:click="deleteTask(task)">
 	            <i class="material-icons left">delete</i>Delete
             </button>
