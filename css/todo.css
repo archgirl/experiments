@@ -17,6 +17,17 @@
   line-height: 2.5rem;
 }
 
+.collection-item label {
+  color: rgba(0,0,0,0.87);
+  font-size: 1rem;
+}
+
+.collection-item.taskDone label {
+  color: rgba(0,0,0,0.87);
+  font-size: 1rem;
+  text-decoration: line-through;
+}
+
 .delete {
   margin-top: 6px;
 }
