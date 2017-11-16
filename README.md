@@ -1,2 +1,3 @@
-# experiments
-Experiments in Front-End Web Dev
+# Experiments from The Lab!
+
+[![forthebadge](http://forthebadge.com/images/badges/fuck-it-ship-it.svg)](http://forthebadge.com)
