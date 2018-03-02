@@ -11,7 +11,7 @@ main {
 
 /* nav card */
 
-.side-nav li>a.nav-title {
+.side-nav li>.nav-title {
   width: 300px;
   height: 64px;
   line-height: 54px;
@@ -43,7 +43,7 @@ li.nav-intro > a {
 }
 .delete {
   color: #bdbdbd;
-  margin-right: 0px;
+  margin-right: 0;
 }
 .delete:hover {
   color: #424242;
@@ -52,7 +52,7 @@ li.nav-intro > a {
 /* Breakpoint Override */
 
 @media only screen and (min-width: 993px) {
-  nav a.button-collapse {
+  nav .button-collapse {
     display: block;
     margin: 0;
   }
